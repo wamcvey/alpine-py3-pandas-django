@@ -1,1 +1,1 @@
-# aws-ecr-depoly
+# bitbucket-ecr
