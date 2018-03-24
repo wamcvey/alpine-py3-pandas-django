@@ -1,6 +1,6 @@
 FROM atlassian/default-image:2
 
-MAINTAINER Tonye Jack
+MAINTAINER Tonye Jack <jtonye@ymail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends jq && apt-get -y upgrade
 RUN apt-get install -y python3 && apt-get install -y python3-pip
