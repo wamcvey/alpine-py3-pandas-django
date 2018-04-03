@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     jq \
     software-properties-common \
     python-software-properties \
-    python3.6 \
     python3.6-dev \
     python3.6-venv \
     && apt-get -y upgrade
