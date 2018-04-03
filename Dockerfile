@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
 RUN pip3.6 install -U awscli
 
-RUN wget --no-check-certificate -q  https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh
+RUN wget --no-check-certificate -q  https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh \
     && bash gitflow-installer.sh install stable; rm gitflow-installer.sh
