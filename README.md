@@ -26,6 +26,7 @@ jq: 1.5-1
 
 ### Python packages:
 botocore: 1.10.2
+
 awscli: 1.15.2
 
 More details about the contents:
