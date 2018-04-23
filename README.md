@@ -11,15 +11,20 @@ pip: 10.0.1
 - numpy: 1.14.0
 - pandas: 0.22.0
 - scipy
-- matplotlib
-
 
 # Usage
+
 Use like you would any other base image:
-```
+```docker
 FROM jackton1/alpine-python3-numpy-pandas:latest
-RUN python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
+RUN python3 -c "import pandas as pd; pd.test();"
 ```
+OR
+
+```bash
+docker run -it --rm jackton1/alpine-python3-numpy-pandas:latest python3 -c "import pandas as pd; pd.test();"
+```
+
 
 # Versioning
 The latest tag matches the most recent release, so jackton1/alpine-python3-numpy-pandas:latest will use the newest stable version available.
