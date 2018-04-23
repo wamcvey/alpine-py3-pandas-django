@@ -20,6 +20,7 @@ RUN set -ex \
             libxml2-dev \
             libxslt-dev \
             libjpeg-turbo-dev \
+            libstdc++ \
             zlib-dev  \
             musl-dev \
             linux-headers \
