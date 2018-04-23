@@ -23,10 +23,17 @@ RUN set -ex \
         make \
         libc-dev \
         libffi-dev \
+        openssl-dev \
+        ca-certificates \
+        libxml2-dev \
+        libxslt1-dev \
+        libjpeg-turbo-dev \
+        zlib-dev  \
         musl-dev \
         linux-headers \
         pcre-dev \
-        && ln -s /usr/include/locale.h /usr/include/xlocale.h \
+    && ln -s /usr/include/locale.h /usr/include/xlocale.h \
+    && update-ca-certificates 2>/dev/null || true \
     && pip3.6 install -U pip==9.0.3 \
     && pip3.6 install --no-cache-dir numpy==${NUMPY_VERSION} pandas==${PANDAS_VERSION} -r requirements.txt \
     && apk del .build-deps
