@@ -21,6 +21,6 @@ RUN set -ex \
             openssh \
             curl \
     && update-ca-certificates 2>/dev/null || true \
-    && curl https://bootstrap.pypa.io/get-pip.py | python3 \
+    && pip3 install -U pip==9.0.3 \
     && LIBRARY_PATH=/lib:/usr/lib /bin/sh -c  "pip3 install --no-cache-dir -r requirements.txt" \
     && apk del .build-deps
