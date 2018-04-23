@@ -18,7 +18,7 @@ pip: 10.0.1
 Use like you would any other base image:
 ```
 FROM jackton1/alpine-python3-numpy-pandas:latest
-RUN /venv/bin/python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
+RUN python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
 ```
 OR use the env vars above.
 
