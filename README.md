@@ -1,5 +1,5 @@
 # Overview
-This image [jackton1/alpine-python3-numpy-pandas]() contains datascience packages(numpy, pandas) with python3.6 alpine linux as the base image.
+This image [jackton1/alpine-python3-numpy-pandas]() contains data science packages(numpy, pandas) with python3.6 alpine linux as the base image.
 
 ### Platform: alpine 3.6
 Packages available out-of-the-box:
