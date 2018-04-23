@@ -1,44 +1,23 @@
 # Overview
-This image [jackton1/bitbucket-alpine-ecr]() replace the [atlassian/default-image:2](https://hub.docker.com/r/atlassian/default-image/)
-provided by [Bitbucket Pipelines](https://confluence.atlassian.com/bitbucket/use-docker-images-as-build-environments-792298897.html)
+This image [jackton1/alpine-python3-numpy-pandas]() contains datascience packages(numpy, pandas) with python3.6 alpine linux as the base image.
 
-### Platform: alpine 3.7
+### Platform: alpine 3.6
 Packages available out-of-the-box:
-wget
-xvfb: 1.19.6
-curl: 7.59.0
-ssh: 7.7.2
-git: 2.17.0
-gitflow: 1.11.0 (AVH Edition)
-mercurial: 4.5.3
-java: Open-JDK 1.8u151
-maven: 3.5.3
-node: 8.11.1
-npm: 5.6.0
-nvm: 0.33.8
-python: 2.7.14, 3.6.4
+python: 3.6.4
 pip: 10.0.1
-gcc: 6.4.0
-ant: 1.9.6
-make: 4.2.1
-jq: 1.6.1
-
 
 ### Python packages:
 - botocore: 1.10.2
 - awscli: 1.15.2
-
+- numpy: 1.14.0
+- pandas: 0.22.0
 
 # Usage
 Use like you would any other base image:
 ```
-FROM jackton1/bitbucket-alpine-ecr:latest
-RUN python3.6 -m pip install -U Django
+FROM jackton1/alpine-python3-numpy-pandas:latest
+RUN python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
 ```
 
-More details about the contents:
-https://confluence.atlassian.com/bitbucket/using-docker-images-as-build-environments-792298897.html
-
 # Versioning
-The latest tag matches the most recent release, so jackton1/bitbucket-alpine-ecr:latest
- will use the newest stable version available.
+The latest tag matches the most recent release, so jackton1/alpine-python3-numpy-pandas:latest will use the newest stable version available.
