@@ -18,7 +18,6 @@ RUN set -ex \
             musl-dev \
             linux-headers \
             pcre-dev \
-            curl \
             python3-dev \
             # Pillow depenencies
             freetype-dev \
