@@ -19,6 +19,12 @@ RUN set -ex \
             linux-headers \
             pcre-dev \
             python3-dev \
+            python3-pip \
+            libssl-dev \
+            libxml2-dev \
+            libxslt1-dev \
+            libjpeg8-dev \
+            zlib1g-dev \
             # Pillow depenencies
             freetype-dev \
             jpeg-dev \
