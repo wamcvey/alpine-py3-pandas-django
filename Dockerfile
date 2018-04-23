@@ -18,8 +18,10 @@ RUN set -ex \
         libstdc++ \
         python3-dev \
     && apk add --no-cache --virtual .build-deps \
-        g++ && \
-        ln -s /usr/include/locale.h /usr/include/xlocale.h \
+        g++ \
+        gcc \
+        make \
+        && ln -s /usr/include/locale.h /usr/include/xlocale.h \
     && pip3.6 install -U pip==9.0.3 \
     && pip3.6 install --no-cache-dir numpy==${NUMPY_VERSION} pandas==${PANDAS_VERSION} -r requirements.txt \
     && apk del .build-deps
