@@ -20,7 +20,6 @@ Use like you would any other base image:
 FROM jackton1/alpine-python3-numpy-pandas:latest
 RUN python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
 ```
-OR use the env vars above.
 
 # Versioning
 The latest tag matches the most recent release, so jackton1/alpine-python3-numpy-pandas:latest will use the newest stable version available.
