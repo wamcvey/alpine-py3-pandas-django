@@ -13,6 +13,11 @@ RUN set -ex \
             g++ \
             gcc \
             make \
+            libc-dev \
+            libffi-dev \
+            musl-dev \
+            linux-headers \
+            pcre-dev \
             bash \
             zsh \
             ca-certificates \
