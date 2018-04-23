@@ -26,7 +26,7 @@ RUN set -ex \
         openssl-dev \
         ca-certificates \
         libxml2-dev \
-        libxslt1-dev \
+        libxslt-dev \
         libjpeg-turbo-dev \
         zlib-dev  \
         musl-dev \
