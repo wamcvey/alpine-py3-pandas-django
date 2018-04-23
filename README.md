@@ -1,5 +1,5 @@
 # Overview
-This image [jackton1/alpine-python3-numpy-pandas](https://hub.docker.com/r/jackton1/alpine-python3-numpy-pandas/) contains data science packages(numpy, pandas, scipy, matplotlib) with python3.6 alpine linux as the base image.
+This image [jackton1/alpine-python3-numpy-pandas](https://hub.docker.com/r/jackton1/alpine-python3-numpy-pandas/) contains data science packages(numpy, pandas) with python3.6 alpine linux as the base image.
 
 ### Platform: alpine 3.6
 Packages available out-of-the-box:
@@ -10,7 +10,6 @@ pip: 10.0.1
 - awscli: 1.15.2
 - numpy: 1.14.0
 - pandas: 0.22.0
-- scipy
 
 # Usage
 
