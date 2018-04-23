@@ -10,13 +10,23 @@ pip: 10.0.1
 - awscli: 1.15.2
 - numpy: 1.14.0
 - pandas: 0.22.0
+- scipy
+- matplotlib
+
+
+### ENV VARS
+- VENV_PATH /venv
+- VENV_PYTHON_PATH /venv/bin/python3
+- VENV_PIP_PATH /venv/bin/pip3
+
 
 # Usage
 Use like you would any other base image:
 ```
 FROM jackton1/alpine-python3-numpy-pandas:latest
-RUN python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
+RUN /venv/bin/python3 -c "import pandas as pd; test = pd.DataFrame({'test': '1'}, index=[0]);"
 ```
+OR use the env vars above.
 
 # Versioning
 The latest tag matches the most recent release, so jackton1/alpine-python3-numpy-pandas:latest will use the newest stable version available.
