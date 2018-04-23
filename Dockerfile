@@ -15,16 +15,16 @@ RUN set -ex \
             make \
             libc-dev \
             libffi-dev \
+            openssl-dev \
+            ca-certificates \
+            libxml2-dev \
+            libxslt-dev \
+            libjpeg-turbo-dev \
+            zlib-dev  \
             musl-dev \
             linux-headers \
             pcre-dev \
             python3-dev \
-            python3-pip \
-            libssl-dev \
-            libxml2-dev \
-            libxslt1-dev \
-            libjpeg8-dev \
-            zlib1g-dev \
             # Pillow depenencies
             freetype-dev \
             jpeg-dev \
