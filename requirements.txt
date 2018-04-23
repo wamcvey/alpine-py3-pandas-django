@@ -1,7 +1,5 @@
 awscli==1.14.28
 numpy==1.14.0
 pandas==0.22.0
-scipy
-matplotlib
 moto
 pytest>=3.0
