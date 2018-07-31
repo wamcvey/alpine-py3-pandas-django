@@ -9,8 +9,7 @@ pip: 10.0.1
 ### Python packages:
 - awscli: 1.15.2
 - numpy: 1.14.0
-- pandas: 0.22.0
-
+- pandas: 0.23.3
 # Usage
 
 Use like you would any other base image:
