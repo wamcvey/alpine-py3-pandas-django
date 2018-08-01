@@ -6,7 +6,7 @@ MAINTAINER Tonye Jack <jtonye@ymail.com>
 ENV PYTHONUNBUFFERED 1
 
 ARG PANDAS_VERSION=0.23.3
-ARG NUMPY_VERSION=1.14.0
+ARG NUMPY_VERSION=1.15.0
 
 
 ADD requirements.txt /requirements.txt
