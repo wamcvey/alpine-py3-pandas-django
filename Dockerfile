@@ -2,12 +2,7 @@ FROM python:3.6-alpine
 
 MAINTAINER Tonye Jack <jtonye@ymail.com>
 
-
 ENV PYTHONUNBUFFERED 1
-
-ARG PANDAS_VERSION=0.23.3
-ARG NUMPY_VERSION=1.15.0
-
 
 ADD requirements.txt /requirements.txt
 
@@ -34,5 +29,5 @@ RUN set -ex \
         pcre-dev \
     && update-ca-certificates 2>/dev/null || true \
     && pip3.6 install -U pip==9.0.3 \
-    && pip3.6 install --no-cache-dir numpy==${NUMPY_VERSION} pandas==${PANDAS_VERSION} -r requirements.txt \
+    && pip3.6 install --no-cache-dir -r requirements.txt \
     && apk del .build-deps
