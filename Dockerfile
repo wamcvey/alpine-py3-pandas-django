@@ -12,6 +12,8 @@ RUN set -ex \
     && apk add --no-cache \
         libstdc++ \
         python3-dev \
+        nodejs \ 
+        nodejs-npm \
     && apk add --no-cache --virtual .build-deps \
         g++ \
         gcc \
@@ -30,4 +32,5 @@ RUN set -ex \
     && update-ca-certificates 2>/dev/null || true \
     && pip3.6 install -U pip==9.0.3 \
     && pip3.6 install --no-cache-dir -r requirements.txt \
+    && npm install -g casperjs phantomjs-prebuilt
     && apk del .build-deps
