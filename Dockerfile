@@ -11,7 +11,6 @@ RUN set -ex \
     && apk upgrade \
     && apk add --no-cache \
         libstdc++ \
-        fontconfig \
         python3-dev \
     && apk add --no-cache --virtual .build-deps \
         g++ \
@@ -30,6 +29,7 @@ RUN set -ex \
         pcre-dev \
         curl \
         curl-dev \
+        fontconfig \
         nodejs \ 
         nodejs-npm \
     && update-ca-certificates 2>/dev/null || true \
