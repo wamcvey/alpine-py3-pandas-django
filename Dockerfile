@@ -41,5 +41,3 @@ RUN set -ex \
     && ln -s /usr/share/phantomjs/phantomjs /usr/bin/phantomjs \
     && npm install -g casperjs \
     && apk del .build-deps
-    
-    
