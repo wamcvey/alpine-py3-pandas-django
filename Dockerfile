@@ -38,5 +38,5 @@ RUN set -ex \
     && ln -s /usr/share/phantomjs/phantomjs /usr/bin/phantomjs \
     && cd /usr/share \
     && curl -L https://github.com/casperjs/casperjs/archive/1.1.4-2.tar.gz | tar -xvf - \
-    && ln -sf /usr/share/casperjs-1.1.4-2/bin/casperjs /usr/local/bin/casperjs
+    && ln -sf /usr/share/casperjs-1.1.4-2/bin/casperjs /usr/local/bin/casperjs \
     && apk del .build-deps
