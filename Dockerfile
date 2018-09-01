@@ -30,13 +30,14 @@ RUN set -ex \
         curl \
         fontconfig \
     && update-ca-certificates 2>/dev/null || true \
-    && pip3.6 install -U pip==9.0.3 \
-    && pip3.6 install --no-cache-dir -r requirements.txt \
     && mkdir -p /usr/share \
     && cd /usr/share \
     && curl -L https://github.com/Overbryd/docker-phantomjs-alpine/releases/download/2.11/phantomjs-alpine-x86_64.tar.bz2 | tar xj \
     && ln -s /usr/share/phantomjs/phantomjs /usr/bin/phantomjs \
     && cd /usr/share \
-    && curl -L https://github.com/casperjs/casperjs/archive/1.1.4-2.tar.gz | tar -xvf - \
-    && ln -sf /usr/share/casperjs-1.1.4-2/bin/casperjs /usr/local/bin/casperjs \
+    && curl -L https://github.com/casperjs/casperjs/archive/1.1.4-2.tar.gz | tar xz \
+    && ln -s /usr/share/casperjs-1.1.4-2/bin/casperjs /usr/local/bin/casperjs \
+    && cd / \
+    && pip3.6 install -U pip==9.0.3 \
+    && pip3.6 install --no-cache-dir -r requirements.txt \
     && apk del .build-deps
