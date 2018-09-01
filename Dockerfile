@@ -3,7 +3,6 @@ FROM python:3.6-alpine
 MAINTAINER Tonye Jack <jtonye@ymail.com>
 
 ENV PYTHONUNBUFFERED 1
-ENV LC_ALL C
 ENV PHANTOMJS_ARCHIVE phantomjs.tar.gz
 
 ADD requirements.txt /requirements.txt
