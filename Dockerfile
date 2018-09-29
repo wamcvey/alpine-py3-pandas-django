@@ -15,6 +15,8 @@ RUN set -ex \
         libstdc++ \
         python3-dev \
         fontconfig \
+        chromium \
+        chromium-chromedriver \
     && apk add --no-cache --virtual .build-deps \
         g++ \
         gcc \
@@ -32,8 +34,6 @@ RUN set -ex \
         pcre-dev \
         curl \
         git \
-        chromium \
-        chromium-chromedriver \
     && update-ca-certificates 2>/dev/null || true \
     && export PATH=$PATH:/usr/lib/chromium-browser \
     && pip3.6 install -U pip==9.0.3 \
