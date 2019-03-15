@@ -1,3 +1,14 @@
-pandas==0.23.3
-numpy==1.15.0
-pytest>=3.0
+#!/usr/bin/env pip-compile 
+pandas>=0.24
+numpy>=1.16
+pytest>=4.3
+
+# Django
+django==2.0.8
+djangorestframework>=3.8
+django-redis==4.9.0
+django-crispy-forms>=1.7
+django-bootstrap-datepicker-plus==3.0.5
+coreapi==2.3.3
+django-bootstrap-datepicker-plus==3.0.5
+

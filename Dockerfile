@@ -1,6 +1,9 @@
-FROM python:3.6-alpine
+FROM python:3.7-alpine
 
-MAINTAINER Tonye Jack <jtonye@ymail.com>
+# from a fork of:
+# https://github.com/jackton1/alpine-python3-numpy-pandas
+
+MAINTAINER William McVey <wam-dockerhub@wamber.net>
 
 ENV PYTHONUNBUFFERED 1
 ENV CHROME_BIN /usr/bin/chromium-browser
@@ -15,8 +18,6 @@ RUN set -ex \
         libstdc++ \
         python3-dev \
         fontconfig \
-        chromium \
-        chromium-chromedriver \
     && apk add --no-cache --virtual .build-deps \
         g++ \
         gcc \
@@ -36,6 +37,6 @@ RUN set -ex \
         git \
     && update-ca-certificates 2>/dev/null || true \
     && export PATH=$PATH:/usr/lib/chromium-browser \
-    && pip3.6 install -U pip==9.0.3 \
-    && pip3.6 install --no-cache-dir -r requirements.txt \
+    && pip3.7 install -U pip~=19.0 \
+    && pip3.7 install --no-cache-dir -r requirements.txt \
     && apk del .build-deps

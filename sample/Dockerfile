@@ -1,3 +1,3 @@
-FROM jackton1/alpine-python3-numpy-pandas:latest
+FROM wamcvey/alpine-py3-pandas-django:latest
 
 RUN python3 -c "import pandas as pd; pd.test();"
