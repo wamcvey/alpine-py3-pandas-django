@@ -6,8 +6,6 @@ FROM python:3.7-alpine
 MAINTAINER William McVey <wam-dockerhub@wamber.net>
 
 ENV PYTHONUNBUFFERED 1
-ENV CHROME_BIN /usr/bin/chromium-browser
-ENV CHROME_PATH /usr/lib/chromium/
 
 ADD requirements.txt /requirements.txt
 
@@ -17,7 +15,11 @@ RUN set -ex \
     && apk add --no-cache \
         libstdc++ \
         python3-dev \
-        fontconfig \
+	gettext \
+	postgresql-client \
+	jpeg openjpeg zlib freetype lcms2 tiff tk tcl \
+	# Useful utilities
+	git curl fontconfig \
     && apk add --no-cache --virtual .build-deps \
         g++ \
         gcc \
@@ -32,11 +34,12 @@ RUN set -ex \
         zlib-dev  \
         musl-dev \
         linux-headers \
-        pcre-dev \
-        curl \
-        git \
+	pcre-dev \
+        postgresql-dev \
+	# Pillow dependencies
+	jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev \
+	tk-dev tcl-dev \
     && update-ca-certificates 2>/dev/null || true \
-    && export PATH=$PATH:/usr/lib/chromium-browser \
     && pip3.7 install -U pip~=19.0 \
     && pip3.7 install --no-cache-dir -r requirements.txt \
     && apk del .build-deps
