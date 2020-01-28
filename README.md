@@ -2,6 +2,11 @@
 This is a basic baseimage with alpine, python 3.7, pandas (and numpy), and 
 some django libraries pre-installed
 
+# Updating
+First update the desired components in requirements.in
+
+Then `pip-compile`
+
 ### Platform: alpine
 
 ```bash
